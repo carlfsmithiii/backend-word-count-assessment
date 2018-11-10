@@ -43,8 +43,14 @@ import sys
 
 
 def print_words(filename):
-    print(sorted(get_word_count_dict(filename)))
+    word_count_dict = get_word_count_dict(filename)
+    alphabetical_words = sorted(word_count_dict.keys())
+    for word in alphabetical_words:
+        print(word + ' ' + str(word_count_dict[word]))
 
+# def print_top(filename):
+#     word_count_dict = get_word_count_dict(filename)
+#     word_count_dict.sort(key=lambda x: )
 
 def get_word_count_dict(filename):
     word_count_dict = {}
