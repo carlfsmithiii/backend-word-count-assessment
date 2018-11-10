@@ -41,6 +41,17 @@ print_words() and print_top().
 
 import sys
 
+def print_words(filename):
+    word_count_dict = {}
+    with open(filename, 'rt') as file:
+        for word in file.read().split():
+            word = word.lower()
+            if word in word_count_dict.keys():
+                word_count_dict[word] += 1
+            else:
+                word_count_dict[word] = 1
+    print(word_count_dict)
+
 # +++your code here+++
 # Define print_words(filename) and print_top(filename) functions.
 # You could write a helper utility function that reads a file
