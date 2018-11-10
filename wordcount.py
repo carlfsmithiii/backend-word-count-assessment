@@ -43,7 +43,7 @@ import sys
 
 
 def print_words(filename):
-    print(get_word_count_dict(filename))
+    print(sorted(get_word_count_dict(filename)))
 
 
 def get_word_count_dict(filename):
